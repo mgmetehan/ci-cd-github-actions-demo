@@ -67,7 +67,7 @@ jobs:
       - name: Build and Push
         uses: docker/build-push-action@v5
         with:
-          tags: latest/githubactionsdemo:0.1.0
+          tags: githubactionsdemo:0.0.1
           context: .
           dockerfile: Dockerfile
           registry: docker.io
