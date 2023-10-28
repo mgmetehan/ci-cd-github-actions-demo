@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
 class ItemControllerTest {
@@ -20,9 +21,10 @@ class ItemControllerTest {
         itemController = new ItemController(itemService);
     }
 
-    @Test
+    @Test //Fail test
     public void createItemTest() {
-        // fail test intentionally
-        fail("This test intentionally fails.");
+        int a = 1;
+        int b = 2;
+        assertEquals(4, a + b);
     }
 }
