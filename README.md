@@ -1,5 +1,6 @@
 # ci-cd-github-actions-demo
 
+
 ## GitHub Actions nedir?
 Yazilim gelistirme sureclerini otomatiklestirmek ve yonetmek icin kullanilir. GitHub Actions, CI (Continuous Integration - Surekli Entegrasyon), CD (Continuous Deployment/Continuous Delivery - Surekli Dagitim/Surekli Teslimat) gibi surecleri kolaylastirmak icin kullanicilarin belirli olaylara veya zamanlamalara bagli olarak belirli eylemler gerceklestirmesine olanak tanir. Bu eylemler, kodu derleme, test etme, paket olusturma, dagitim yapma gibi islemleri icerebilir.
 
@@ -10,7 +11,6 @@ Yazilim gelistirme sureclerini otomatiklestirmek ve yonetmek icin kullanilir. Gi
 <p align="center">
     <img src="png/workflow.png" alt="workflow" width="%100" height="%100" style="border-radius: 20px">
 </p>
-
 
 
 ## GitHub Actions CI/CD temel terminoloji ve kavramlar nelerdir?
@@ -26,6 +26,7 @@ Yazilim gelistirme sureclerini otomatiklestirmek ve yonetmek icin kullanilir. Gi
 `5. Runner`<br> GitHub Actions is akislarinin calistirildigi sanal ortamlardir. Runner'lar, is akislarinin calistirilmasi icin gereken kaynaklari saglar. GitHub'ta barindirilan calistiricilar oldugu gibi kendi kendinize barindirabileceginiz ozellestirilmis calistiricilar da bulunmaktadir.
 
 `6. Event`<br> GitHub Actions is akislarinin tetikleyicisi olan olaylardir. Ornegin, kodun bir dalina yapilan push olayi, bir pull request, bir zamanlama veya baska bir GitHub olayi bir is akisini tetikleyebilir.
+
 
 ## CI/CD'nin faydalari ve zorluklari:
 ### Faydalari:
@@ -77,3 +78,36 @@ CD sistemi onaylanan degisiklikleri uretime dagitir
 
 ## Secret Key Ekleme:
 ![gifmaker_me (1)](https://github.com/mgmetehan/ci-cd-github-actions-demo/assets/41691766/1689a9a3-5395-4c4f-ac16-c60864ad0e37)
+
+
+## Build & Run
+```shell
+  docker build . -t githubactionsdemo
+```
+```shell
+  docker images
+```
+```shell
+  docker run -p 8088:8088 -t githubactionsdemo
+```
+
+
+## Tech Stack
+
+- Java 17
+- Spring Boot 3.0
+- Docker
+- Lombok
+- H2
+
+
+## Requirements
+
+For building and running the application you need:
+
+- [JDK 17 or newer](https://www.oracle.com/java/technologies/javase-downloads.html)
+- [Maven](https://maven.apache.org)
+- [Lombok](https://projectlombok.org/)
+- [Docker](https://www.docker.com/)
+- [H2](https://www.h2database.com/html/main.html)
+
