@@ -37,8 +37,8 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v3
 
       - name: Setup JDK 17
         uses: actions/setup-java@v3
@@ -55,7 +55,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-      - name: Build with Maven
+      - name: Build App
         run: mvn -B package --file pom.xml -DskipTests
 
       - name: Login to Docker Hub
@@ -67,9 +67,10 @@ jobs:
       - name: Build and Push
         uses: docker/build-push-action@v5
         with:
+          tags: latest/githubactionsdemo:0.1.0
           context: .
-          tags: latest/githubactions
-          registry: docker.io
           dockerfile: Dockerfile
+          registry: docker.io
+          push: true
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
