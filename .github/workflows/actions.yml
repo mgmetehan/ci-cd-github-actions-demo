@@ -37,7 +37,7 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v3
 
       - name: Setup JDK 17
@@ -67,7 +67,7 @@ jobs:
       - name: Build and Push
         uses: docker/build-push-action@v5
         with:
-          tags: githubactionsdemo:0.0.1
+          tags: latest
           context: .
           dockerfile: Dockerfile
           registry: docker.io
