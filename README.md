@@ -124,13 +124,13 @@ For building and running the application you need:
 
 
 ## Kaynakca:
-https://www.youtube.com/watch?v=eMrOMD6HgDg&ab_channel=H%C3%BCseyinBABAL
-https://www.youtube.com/watch?v=R8_veQiYBjI&ab_channel=TechWorldwithNana
-https://www.linkedin.com/pulse/testing-java-apps-junit-github-actions-emad-mohamed/
-https://programmingpercy.tech/blog/github-actions-in-action/
-https://kadermiyanyedi.medium.com/github-actions-nedir-f61a77b49c23
-https://www.atomicjar.com/2023/06/running-testcontainers-tests-using-github-actions/
-https://dev.to/rubyshiv/how-to-deploy-springboot-app-to-elastic-beanstalk-using-github-actions-cicd-2ihi
-https://github.com/docker/login-action
-https://github.com/actions/cache
-https://github.com/marketplace/actions/build-and-push-docker-images
+- https://www.youtube.com/watch?v=eMrOMD6HgDg&ab_channel=H%C3%BCseyinBABAL
+- https://www.youtube.com/watch?v=R8_veQiYBjI&ab_channel=TechWorldwithNana
+- https://www.linkedin.com/pulse/testing-java-apps-junit-github-actions-emad-mohamed/
+- https://programmingpercy.tech/blog/github-actions-in-action/
+- https://kadermiyanyedi.medium.com/github-actions-nedir-f61a77b49c23
+- https://www.atomicjar.com/2023/06/running-testcontainers-tests-using-github-actions/
+- https://dev.to/rubyshiv/how-to-deploy-springboot-app-to-elastic-beanstalk-using-github-actions-cicd-2ihi
+- https://github.com/docker/login-action
+- https://github.com/actions/cache
+- https://github.com/marketplace/actions/build-and-push-docker-images
