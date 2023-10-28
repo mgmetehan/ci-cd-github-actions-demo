@@ -71,4 +71,4 @@ jobs:
           context: .
           dockerfile: Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/githubactionscicd:0.0.1
+          tags: ${{ secrets.DOCKER_USERNAME }}/githubactions:lastest
