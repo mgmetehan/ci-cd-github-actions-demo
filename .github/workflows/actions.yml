@@ -75,3 +75,4 @@ jobs:
           dockerfile: Dockerfile  # Docker dosyasi
           username: ${{ secrets.DOCKER_USERNAME }}  # Docker kullanici adi
           password: ${{ secrets.DOCKER_PASSWORD }}  # Docker parola
+
