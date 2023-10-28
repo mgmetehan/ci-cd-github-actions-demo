@@ -69,10 +69,9 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5  # Imaji olustur ve yayinla
         with:
-          image: mgmetehanx/githubactionsdemo  # Docker imaji adi
+          image: mgmetehanx/githubactions # Docker imaji adi
           tags: latest  # Etiket adi
           registry: docker.io  # Docker hub adresi
           dockerfile: Dockerfile  # Docker dosyasi
           username: ${{ secrets.DOCKER_USERNAME }}  # Docker kullanici adi
           password: ${{ secrets.DOCKER_PASSWORD }}  # Docker parola
-
