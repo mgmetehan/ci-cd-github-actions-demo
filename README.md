@@ -1,5 +1,16 @@
 # ci-cd-github-actions-demo
 
+## Icerik
+- [GitHub Actions nedir?](#github-actions-nedir)
+- [GitHub Actions CI/CD temel terminoloji ve kavramlar nelerdir?](#github-actions-cicd-temel-terminoloji-ve-kavramlar-nelerdir)
+- [CI/CD'nin faydalari ve zorluklari](#cicdnin-faydalari-ve-zorluklari)
+- [Basit Terimlerle Aciklanan CI/CD Sureci](#basit-terimlerle-aciklanan-cicd-sureci)
+- [Secret_Key Ekleme](#secret-key-ekleme)
+- [Build & Run](#build--run)
+- [Tech Stack](#tech-stack)
+- [Requirements](#requirements)
+- [Kaynakca](#kaynakca)
+
 
 ## GitHub Actions nedir?
 Yazilim gelistirme sureclerini otomatiklestirmek ve yonetmek icin kullanilir. GitHub Actions, CI (Continuous Integration - Surekli Entegrasyon), CD (Continuous Deployment/Continuous Delivery - Surekli Dagitim/Surekli Teslimat) gibi surecleri kolaylastirmak icin kullanicilarin belirli olaylara veya zamanlamalara bagli olarak belirli eylemler gerceklestirmesine olanak tanir. Bu eylemler, kodu derleme, test etme, paket olusturma, dagitim yapma gibi islemleri icerebilir.
@@ -28,7 +39,7 @@ Yazilim gelistirme sureclerini otomatiklestirmek ve yonetmek icin kullanilir. Gi
 `6. Event`<br> GitHub Actions is akislarinin tetikleyicisi olan olaylardir. Ornegin, kodun bir dalina yapilan push olayi, bir pull request, bir zamanlama veya baska bir GitHub olayi bir is akisini tetikleyebilir.
 
 
-## CI/CD'nin faydalari ve zorluklari:
+## CI/CD'nin faydalari ve zorluklari
 ### Faydalari:
 
 1. ` Hizli Geri Bildirim:` Degisikliklerin hizli bir sekilde test edilmesi ve geri bildirim alinmasi, hatalarin erken tespit edilmesini ve giderilmesini saglar.
@@ -111,3 +122,15 @@ For building and running the application you need:
 - [Docker](https://www.docker.com/)
 - [H2](https://www.h2database.com/html/main.html)
 
+
+## Kaynakca:
+https://www.youtube.com/watch?v=eMrOMD6HgDg&ab_channel=H%C3%BCseyinBABAL
+https://www.youtube.com/watch?v=R8_veQiYBjI&ab_channel=TechWorldwithNana
+https://www.linkedin.com/pulse/testing-java-apps-junit-github-actions-emad-mohamed/
+https://programmingpercy.tech/blog/github-actions-in-action/
+https://kadermiyanyedi.medium.com/github-actions-nedir-f61a77b49c23
+https://www.atomicjar.com/2023/06/running-testcontainers-tests-using-github-actions/
+https://dev.to/rubyshiv/how-to-deploy-springboot-app-to-elastic-beanstalk-using-github-actions-cicd-2ihi
+https://github.com/docker/login-action
+https://github.com/actions/cache
+https://github.com/marketplace/actions/build-and-push-docker-images
