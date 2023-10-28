@@ -1,0 +1,77 @@
+name: CI/CD Actions
+
+on:
+  push:
+    branches: [master]  # Branch push edildiginde tetikler
+  pull_request:
+    branches: [master]  # Pull request acildiginda tetikler
+
+jobs:
+  test:
+    name: Unit Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3  # Kodu al
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3  # JDK 17'yi yapilandir
+        with:
+          java-version: '17'
+          distribution: 'corretto'
+          cache: 'maven'
+
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml  # Maven ile derle
+
+      - name: Cache Maven packages
+        uses: actions/cache@v3  # Maven paketlerini onbellege al
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+      - name: Run Tests
+        run: mvn -B test  # Testleri calistir
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4  # Kodu al
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3  # JDK 17'yi yapilandir
+        with:
+          java-version: '17'
+          distribution: 'corretto'
+          cache: 'maven'
+
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml -DskipTests  # Maven ile derle
+
+      - name: Cache Maven packages
+        uses: actions/cache@v3  # Maven paketlerini onbellege al
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3  # Docker Buildx'i yapilandir
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3  # Docker Hub'a giris yap
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}  # Docker kullanici adi
+          password: ${{ secrets.DOCKER_PASSWORD }}  # Docker parola
+
+      - name: Build and push
+        uses: docker/build-push-action@v5  # Imaji olustur ve yayinla
+        with:
+          image: mgmetehan/githubactionsdemo  # Docker imaji adi
+          tags: githubactionsdemo  # Etiket adi
+          registry: docker.io  # Docker hub adresi
+          dockerfile: Dockerfile  # Docker dosyasi
+          username: ${{ secrets.DOCKER_USERNAME }}  # Docker kullanici adi
+          password: ${{ secrets.DOCKER_PASSWORD }}  # Docker parola
