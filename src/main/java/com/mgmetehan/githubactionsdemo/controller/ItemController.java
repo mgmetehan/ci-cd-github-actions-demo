@@ -17,6 +17,6 @@ public class ItemController {
 
     @PostMapping
     private Item createItem(@RequestBody CreateItemDto dto) {
-        return itemService.createItem(dto);//
+        return itemService.createItem(dto);
     }
 }

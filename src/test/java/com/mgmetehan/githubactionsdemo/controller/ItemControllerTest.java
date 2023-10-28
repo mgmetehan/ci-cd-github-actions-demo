@@ -21,10 +21,19 @@ class ItemControllerTest {
         itemController = new ItemController(itemService);
     }
 
+/*
     @Test //Fail test
     public void createItemTest() {
         int a = 1;
         int b = 2;
         assertEquals(4, a + b);
+    }
+*/
+
+    @Test //Success test
+    public void createItemTest() {
+        int a = 1;
+        int b = 2;
+        assertEquals(3, a + b);
     }
 }
