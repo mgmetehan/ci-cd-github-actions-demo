@@ -70,7 +70,7 @@ jobs:
         uses: docker/build-push-action@v5  # Imaji olustur ve yayinla
         with:
           image: mgmetehan/githubactionsdemo  # Docker imaji adi
-          tags: githubactionsdemo  # Etiket adi
+          tags: latest  # Etiket adi
           registry: docker.io  # Docker hub adresi
           dockerfile: Dockerfile  # Docker dosyasi
           username: ${{ secrets.DOCKER_USERNAME }}  # Docker kullanici adi
