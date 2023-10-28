@@ -3,6 +3,16 @@
 ## GitHub Actions nedir?
 Yazilim gelistirme sureclerini otomatiklestirmek ve yonetmek icin kullanilir. GitHub Actions, CI (Continuous Integration - Surekli Entegrasyon), CD (Continuous Deployment/Continuous Delivery - Surekli Dagitim/Surekli Teslimat) gibi surecleri kolaylastirmak icin kullanicilarin belirli olaylara veya zamanlamalara bagli olarak belirli eylemler gerceklestirmesine olanak tanir. Bu eylemler, kodu derleme, test etme, paket olusturma, dagitim yapma gibi islemleri icerebilir.
 
+<p align="center">
+    <img src="png/actions.png" alt="actions" width="%100" height="%100" style="border-radius: 20px">
+</p>
+
+<p align="center">
+    <img src="png/workflow.png" alt="workflow" width="%100" height="%100" style="border-radius: 20px">
+</p>
+
+
+
 ## GitHub Actions CI/CD temel terminoloji ve kavramlar nelerdir?
 
 `1. CI (Continuous Integration - Surekli Entegrasyon)`<br> CI, gelistirme surecinde kodun otomatik olarak derlenip birlestirilmesini ve test edilmesini saglayan bir yontemdir. Bu, kod tabanindaki degisikliklerin birlestirilerek catismalarin erken tespit edilmesini ve hatalarin azaltilmasini saglar.
@@ -36,6 +46,34 @@ Yazilim gelistirme sureclerini otomatiklestirmek ve yonetmek icin kullanilir. Gi
 4. ` Entegrasyon Zorluklari:` Bazi karmasik sistemlerde CI/CD'nin diger sureclerle entegrasyonu zor olabilir.
 5. ` Egitim Gereksinimi:` Ekibin CI/CD sureclerini anlamasi ve etkin bir sekilde kullanmasi icin egitim gerekebilir.
 6. ` Buyuk Olcekli Projelerde Yonetim Zorluklari:` Buyuk olcekli projelerde CI/CD sureclerini yonetmek ve koordine etmek zor olabilir.
+
+
+## Basit Terimlerle Aciklanan CI/CD Sureci
+    !!! ByteByteGo yazisinin turkce cevirisi.
+### Bolum 1 - CI/CD ile SDLC
+Yazilim gelistirme yasam dongusu (SDLC), gelistirme, test, dagitim ve bakim gibi birkac temel asamadan olusur. CI/CD bu asamalari otomatiklestirir ve entegre ederek daha hizli ve guvenilir surumler saglar.
+Kod bir git deposuna gonderildiginde, otomatik bir derleme ve test sureci tetiklenir. Uctan uca (e2e) test durumlari kodu dogrulamak icin calistirilir. Testler basarili olursa, kod otomatik olarak staging/production ortamlarina dagitilabilir. Sorunlar bulunursa, kod geri gonderilir ve gelistirme asamasinda hata duzeltme islemine alinir. Bu otomasyon, gelistiricilere hizli geri bildirim saglar ve uretimde hata riskini azaltir.
+
+### Bolum 2 - CI ve CD Arasindaki Fark
+Surekli Entegrasyon (CI), derleme, test ve birlestirme surecini otomatiklestirir. Kod her gonderildiginde entegrasyon sorunlarini erken tespit etmek icin testleri calistirir. Bu,  kod gonderimlerini tesvik eder ve hizli geri bildirim saglar.
+
+Surekli Dagitim (CD), altyapi degisiklikleri ve dagitim gibi yayin sureclerini otomatiklestirir. CD, yazilimin otomatik is akislariyla herhangi bir zamanda guvenilir bir sekilde yayinlanabilecegini saglar. CD ayrica, uretim dagitimindan once gereken manuel test ve onay adimlarini da otomatiklestirebilir.
+
+### Bolum 3 - CI/CD Sureci
+Tipik bir CI/CD surecinde birkac baglantili asama bulunur:
+
+Gelistirici, kod degisikliklerini kaynak kontrolune gonderir
+CI sunucusu degisiklikleri algilar ve derlemeyi tetikler
+Kod derlenir, test edilir (birim, entegrasyon testleri)
+Test sonuclari gelistiriciye raporlanir
+Basarili olunursa, urunler staging ortamlarina dagitilir
+Yayin oncesinde staging uzerinde daha fazla test yapilabilir
+CD sistemi onaylanan degisiklikleri uretime dagitir
+
+<p align="center">
+    <img src="png/ci-cd.jpeg" alt="ci-cd" width="%100" height="%100" style="border-radius: 20px">
+</p>
+
 
 ## Secret Key Ekleme:
 ![gifmaker_me (1)](https://github.com/mgmetehan/ci-cd-github-actions-demo/assets/41691766/1689a9a3-5395-4c4f-ac16-c60864ad0e37)
