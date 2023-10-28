@@ -36,3 +36,6 @@ Yazilim gelistirme sureclerini otomatiklestirmek ve yonetmek icin kullanilir. Gi
 4. ` Entegrasyon Zorluklari:` Bazi karmasik sistemlerde CI/CD'nin diger sureclerle entegrasyonu zor olabilir.
 5. ` Egitim Gereksinimi:` Ekibin CI/CD sureclerini anlamasi ve etkin bir sekilde kullanmasi icin egitim gerekebilir.
 6. ` Buyuk Olcekli Projelerde Yonetim Zorluklari:` Buyuk olcekli projelerde CI/CD sureclerini yonetmek ve koordine etmek zor olabilir.
+
+## Secret Key Ekleme:
+![gifmaker_me (1)](https://github.com/mgmetehan/ci-cd-github-actions-demo/assets/41691766/1689a9a3-5395-4c4f-ac16-c60864ad0e37)
