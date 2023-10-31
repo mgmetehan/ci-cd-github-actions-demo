@@ -38,6 +38,9 @@ Yazilim gelistirme sureclerini otomatiklestirmek ve yonetmek icin kullanilir. Gi
 
 `6. Event`<br> GitHub Actions is akislarinin tetikleyicisi olan olaylardir. Ornegin, kodun bir dalina yapilan push olayi, bir pull request, bir zamanlama veya baska bir GitHub olayi bir is akisini tetikleyebilir.
 
+<p align="center">
+    <img src="png/circ.jpeg" alt="workflow" width="%100" height="%100" style="border-radius: 20px">
+</p>
 
 ## CI/CD'nin faydalari ve zorluklari
 ### Faydalari:
