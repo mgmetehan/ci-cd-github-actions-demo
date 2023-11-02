@@ -11,6 +11,8 @@
 - [Requirements](#requirements)
 - [Kaynakca](#kaynakca)
 
+## Best GitHub Actions documentation 
+    https://docs.github.com/actions
 
 ## GitHub Actions nedir?
 Yazilim gelistirme sureclerini otomatiklestirmek ve yonetmek icin kullanilir. GitHub Actions, CI (Continuous Integration - Surekli Entegrasyon), CD (Continuous Deployment/Continuous Delivery - Surekli Dagitim/Surekli Teslimat) gibi surecleri kolaylastirmak icin kullanicilarin belirli olaylara veya zamanlamalara bagli olarak belirli eylemler gerceklestirmesine olanak tanir. Bu eylemler, kodu derleme, test etme, paket olusturma, dagitim yapma gibi islemleri icerebilir.
@@ -131,6 +133,7 @@ For building and running the application you need:
 - https://www.youtube.com/watch?v=R8_veQiYBjI&ab_channel=TechWorldwithNana
 - https://www.linkedin.com/pulse/testing-java-apps-junit-github-actions-emad-mohamed/
 - https://programmingpercy.tech/blog/github-actions-in-action/
+- https://youtu.be/sDZ6aHyAz2g?si=tYiOuMXXIf4TOTNt
 - https://kadermiyanyedi.medium.com/github-actions-nedir-f61a77b49c23
 - https://www.atomicjar.com/2023/06/running-testcontainers-tests-using-github-actions/
 - https://dev.to/rubyshiv/how-to-deploy-springboot-app-to-elastic-beanstalk-using-github-actions-cicd-2ihi
