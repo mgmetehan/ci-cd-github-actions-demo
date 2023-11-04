@@ -19,9 +19,10 @@ spring:
         jdbc:
           lob:
             non_contextual_creation: true
+  banner:
+    location: banner.txt
 
 server:
   port: 8088
 
 #Db connection =http://localhost:8080/h2-console/
-
