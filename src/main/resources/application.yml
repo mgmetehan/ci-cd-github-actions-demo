@@ -1,4 +1,7 @@
 spring:
+  info:
+    build:
+      creator: Metehan Gultekin
   h2:
     console:
       enabled: true
