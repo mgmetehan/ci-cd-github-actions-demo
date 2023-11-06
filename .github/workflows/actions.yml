@@ -1,18 +1,18 @@
 name: CI/CD Actions
 
-on:
-  push:
+on: # Tetikleyici
+  push: # Push edildiginde tetikler
     branches: [ master ]  # Branch push edildiginde tetikler
   pull_request:
     branches: [ master ]  # Pull request acildiginda tetikler
 
 jobs:
-  test:
+  test: # Test isimli bir is akisi
     name: Unit Test
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # Ubuntu tabanli bir ortamda calisacak
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3  # Kodu al
+        uses: actions/checkout@v3 # Kodu cekmek icin checkout aksiyonunu kullaniyoruz
 
       - name: Set up JDK 17
         uses: actions/setup-java@v3  # JDK 17'yi yapilandir
@@ -24,12 +24,12 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml  # Maven ile derle
 
-      - name: Cache Maven packages
-        uses: actions/cache@v3  # Maven paketlerini onbellege al
+      - name: Cache local Maven repository
+        uses: actions/cache@v3 # Maven paketlerini onbellege al
         with:
-          path: ~/.m2
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-m2
+          path: ~/.m2/repository # Maven paketlerinin bulundugu dizin
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }} # Maven paketlerini onbellege alirken kullanilacak anahtar
+          restore-keys: ${{ runner.os }}-maven- # Maven paketlerini onbelleginden geri yuklerken kullanilacak anahtar
 
       - name: Run Tests
         run: mvn -B test  # Testleri calistir

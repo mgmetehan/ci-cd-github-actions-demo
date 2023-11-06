@@ -1,12 +1,14 @@
 # ci-cd-github-actions-demo
 
 ## Icerik
+- [Best GitHub Actions documentation](#best-github-actions-documentation)
 - [GitHub Actions nedir?](#github-actions-nedir)
 - [GitHub Actions CI/CD temel terminoloji ve kavramlar nelerdir?](#github-actions-cicd-temel-terminoloji-ve-kavramlar-nelerdir)
 - [CI/CD'nin faydalari ve zorluklari](#cicdnin-faydalari-ve-zorluklari)
 - [Basit Terimlerle Aciklanan CI/CD Sureci](#basit-terimlerle-aciklanan-cicd-sureci)
 - [Secret_Key Ekleme](#secret-key-ekleme)
-- [Build & Run](#build--run)
+- [Docker Hub'a gonderdigimiz imaji calistirmak adimlari](#docker-huba-gonderdigimiz-imaji-calistirmak-adimlari)
+- [Local Build & Run](#local-build--run)
 - [Tech Stack](#tech-stack)
 - [Requirements](#requirements)
 - [Kaynakca](#kaynakca)
@@ -95,8 +97,29 @@ CD sistemi onaylanan degisiklikleri uretime dagitir
 ## Secret Key Ekleme:
 ![gifmaker_me (1)](https://github.com/mgmetehan/ci-cd-github-actions-demo/assets/41691766/1689a9a3-5395-4c4f-ac16-c60864ad0e37)
 
+## Docker Hub'a gonderdigimiz imaji calistirmak adimlari:
 
-## Build & Run
+1. Docker Hub'dan proje imajini cekin:
+   ```shell
+   docker pull mgmetehanx/githubactions:latest 
+   ```
+
+2. Docker uzerinde imaji calistirin:
+   ```shell
+   docker run -p 8088:8088 mgmetehanx/githubactions:latest
+   ```
+
+3. Asagidaki komutu kullanarak API'ye POST istegi gonderin:
+   ```shell
+    curl -X POST -H "Content-Type: application/json" -d '{
+    "name": "test",
+    "price": 1,
+    "brand": "test",
+    "category": "test"
+    }' http://localhost:8088/api/v1/items   
+    ```
+
+## Local Build & Run
 ```shell
   docker build . -t githubactionsdemo
 ```
