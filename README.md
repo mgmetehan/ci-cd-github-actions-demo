@@ -13,6 +13,12 @@
 - [Requirements](#requirements)
 - [Kaynakca](#kaynakca)
 
+# Sunum Kaydi:
+[Github Actions ile CI/CD](https://www.youtube.com/live/kvwOObWn8GU?si=1fiIVhhLZvPB61KQ)
+
+    https://www.youtube.com/live/kvwOObWn8GU?si=50GoSl4ulKtocw2E
+
+
 ## Best GitHub Actions documentation 
     https://docs.github.com/actions
 
